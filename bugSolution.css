@@ -1,0 +1,20 @@
+The solution avoids using `!important` by restructuring the CSS rules and leveraging more specific selectors to achieve the desired outcome. 
+
+```css
+.parent {
+  color: blue;
+}
+
+.parent .child {
+  color: green;
+}
+
+.child {
+  color: red;
+}
+
+/* or, if .child should always be red, regardless of its parent: */
+.child { color: red; }
+```
+
+This corrected CSS ensures that the intended styling is applied based on correct specificity without the use of `!important`, making the CSS more manageable and easier to maintain.
